@@ -1,0 +1,21 @@
+type Item {
+  id: Int
+  item: String
+  price: Float
+}
+
+input ItemInput {
+  item: String
+  price: Float
+}
+
+type Query {
+  items: [Item]
+  item: Item
+}
+
+type Mutation {
+  createItem(input: ItemInput!): Item
+  updateItem(input: ItemInput!): Item
+  deleteItem(id: String!): Item
+}

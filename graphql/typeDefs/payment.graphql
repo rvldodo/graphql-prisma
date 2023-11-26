@@ -1,0 +1,21 @@
+type Payment {
+  id: Int
+  user_id: Int
+  order_id: Int
+}
+
+input PaymentInput {
+  user_id: Int
+  order_id: Int
+}
+
+type Query {
+  payment: Payment
+  payments: [Payment]
+}
+
+type Mutation {
+  createPayment(input: PaymentInput!): Payment
+  updatePayment(input: PaymentInput!): Payment
+  deletePayment(id: String!): Payment
+}
