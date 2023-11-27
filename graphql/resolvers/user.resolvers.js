@@ -12,7 +12,6 @@ export const userResolvers = {
       return await getUsers();
     },
     async user(_, { input }) {
-      console.log(input);
       return await getUserById(input.id);
     },
   },
